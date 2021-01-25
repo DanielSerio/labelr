@@ -1,0 +1,11 @@
+@import '../../../scss/config/config';
+
+.control-error {
+  border: 1px solid $error;
+  color: $error;
+  background: rgba($error, 0.025);
+  line-height: 2;
+  padding: 0 1ch;
+  margin-top: 1rem;
+  border-radius: 3px;
+}

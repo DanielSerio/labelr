@@ -5,7 +5,7 @@ import './Control.scss';
 
 export default function Control({ children, className, labelText, error, ...rest }: ControlProps) {
   return (
-    <div className={`control ${className || ''}`.trim()}>
+    <div className={`control ${className || ''} ${error ? 'error' : ''}`.trim()}>
       {error && <ControlError error={error}/>}
       { children }
       <label className="label" {...rest}>{labelText}</label>
