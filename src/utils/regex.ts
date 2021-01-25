@@ -1,0 +1,1 @@
+export const SPECNAME_RE: RegExp = /^(\s*)\w{2,3}-LS-[A-Z0-9]{4,}(\s*)$/g;

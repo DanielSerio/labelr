@@ -1,0 +1,13 @@
+@import '../../../scss/config/config';
+
+.data-error {
+  font-weight: bold;
+  border: 1px solid $error;
+  text-shadow: 0 0 1px white;
+  border-radius: 3px;
+  background: rgba($error, 0.125);
+  color: darken($error, 8%);
+  padding: 1ch;
+  margin: 2ch 0;
+  box-shadow: 1px 2px 12px rgba(#333, 0.125);
+}
