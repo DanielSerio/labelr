@@ -42,7 +42,6 @@ export default function Dashboard() {
           {!formOpen ? <AiOutlineArrowDown /> : <AiOutlineArrowUp />}
         </Button>
       </section>
-      <Loading />
     </main>
   )
 }
