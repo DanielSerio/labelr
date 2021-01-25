@@ -1,0 +1,20 @@
+$black: #101215ff;
+$grey: #969696ff;
+$white: desaturate(darken(mix(#f7f3e3ff, #fdfdfd), 4%), 30%);
+$paper: #fff;
+$blue: #006d8fff;
+$green: #09814aff;
+$red: #a8201aff;
+$orange: #f17300ff;
+
+
+$background: $white;
+$color: $black;
+$primary: $blue;
+$secondary: $grey;
+$success: $green;
+$warn: $orange;
+$error: $red;
+
+$input-border-color: $grey;
+$input-border-hover-color: darken(grey, 25%);

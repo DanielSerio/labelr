@@ -1,0 +1,59 @@
+@import '../../../scss/config/config';
+
+.table-container {
+  overflow-y: auto;
+  border: 1px solid darken($white, 8%);
+  border-radius: 3px;
+  padding: 1ch;
+
+  .table-header { 
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1ch;
+   }
+
+  table { overflow: hidden; }
+
+  thead {
+    box-shadow: 0px 0px 8px -2px rgba(#333, 0.5);
+
+    .cell {
+      font-weight: bold;
+      color: rgba(black, 0.7);
+    }
+  }
+
+  tbody {
+    background: lighten(desaturate(rgba($white, 0.67), 100%), 2.5%);
+
+    tr:not(.development) { td:nth-child(2) .cell { color: darken($success, 8%); } } 
+  }
+
+  tr {
+    background: rgba($paper, 0.35);
+
+    &.development {
+      background: rgba($warn, 0.125);
+      border: 1px solid $warn;
+      color: darken($warn, 24%);
+    }
+
+    &:not(.development):hover { 
+      background: $paper;
+      box-shadow: 1px 2px 2px rgba(#333, 0.125);
+     }
+  }
+
+  .cell { 
+    line-height: 2; 
+    padding: 0 0.5ch;
+
+    .btn { 
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+
+      .text { flex: 1; }
+    }
+  }
+}

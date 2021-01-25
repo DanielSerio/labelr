@@ -1,0 +1,23 @@
+button,
+input,
+textarea {
+  outline: none;
+  appearance: none;
+  background: transparent;
+  font-size: inherit;
+  line-height: 2;
+  font-family: inherit;
+  border-radius: #{(3 / 16)}rem;
+  transition: all 0.15s ease-in-out;
+}
+
+button {
+   border: none;
+}
+
+input,
+textarea {
+  border: 1px solid $input-border-color;
+
+  &:hover { border-color: $input-border-hover-color; }
+}

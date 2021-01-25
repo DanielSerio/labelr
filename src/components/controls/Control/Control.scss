@@ -1,0 +1,30 @@
+@import '../../../scss/config/config';
+
+.control {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+
+  .label { 
+    font-size: 0.95rem; 
+    font-weight: bold;
+    line-height: 2rem;
+    transition: all 0.15s ease-in-out;
+    color: rgba(black, 0.67);
+  }
+
+  .input,
+  .textarea { 
+    font-size: 1.25em; 
+
+    padding: 0 0.5ch;
+  }
+
+  &:not(.error) {
+    .input:focus {
+      border-color: $primary;
+
+      & + .label { color: $primary; }
+    }
+  }
+}

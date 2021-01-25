@@ -1,0 +1,18 @@
+@import '../../../scss/config/config';
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dashboard-container {
+    height: 90%;
+    width: 90%;
+    max-width: 1000px;
+    background: $paper;
+    box-shadow: 1px 2px 4px rgba(#333, 0.125);
+    border-radius: $br;
+    padding: 1ch;
+    overflow-y: auto;
+  }
+}

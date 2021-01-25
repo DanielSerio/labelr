@@ -1,0 +1,20 @@
+@import '../../../scss/config/config';
+
+$colors: (primary: $primary, secondary: $secondary, success: $success, error: $error, warn: $warn); 
+
+.btn {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  .text { margin-right: 1ch; }
+}
+
+@each $key, $value in $colors {
+    .btn-#{$key} {
+      background: $value;
+      color: white;
+      text-shadow: 0 0 0 black;
+
+      &:hover { background: darken($value, 8%); }
+    }
+}
