@@ -9,15 +9,27 @@
   span { 
     width: 1rem; 
     background: blue;
-    height: 50px;
+    min-height: 50px;
     margin: 0 0.5ch;
   }
 
   
 }
-$sizes: (1: 50, 2: 65, 3: 80, 4: 95, 5: 80, 6: 65, 7: 50, 8: 65, 9: 80, 10: 95 );
-@each $size, $index in $sizes {
-  span:nth-child(#{$index}) {
-    height: #{$size} + 0%;
+$sizes: (
+  1: 50, 
+  2: 65, 
+  3: 80, 
+  4: 95, 
+  5: 80, 
+  6: 65, 
+  7: 50, 
+  8: 65, 
+  9: 80, 
+  10: 95 
+);
+
+@each $i, $s in $sizes {
+  .loading > span:nth-child(#{$i}) {
+    height: #{$s}px;
   }
 }
