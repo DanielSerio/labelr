@@ -3,7 +3,8 @@ import { ISpec } from '../../../types';
 import Button from '../../controls/Button/Button';
 import Table from '../../data/Table/Table';
 import AddSpecForm from '../../forms/AddSpecForm/AddSpecForm';
-import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai'
+import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai';
+import { useCollection } from 'react-firebase-hooks/firestore';
 import './Dashboard.scss';
 import Loading from '../../data/Loading/Loading';
 import { setTimeout } from 'timers';
@@ -12,6 +13,7 @@ export default function Dashboard() {
   const [formOpen, setFormOpen] = useState<boolean>(false);
   const toggleForm = () => setFormOpen(!formOpen);
   const [testSpecs, setTestSpecs] = useState<ISpec[]|null>(null);
+  const {} = useCollection();
 
   useEffect(() => {
     setTimeout(() => {
